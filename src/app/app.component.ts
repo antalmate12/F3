@@ -14,5 +14,19 @@ export class Koltseg {
 })
 export class AppComponent {
   data:Koltseg[]=[];
-  
+
+  addData(obj,obj2,obj3) {
+    if(obj) {
+      if(obj2){
+        if(obj3){
+          this.data.push({
+            datum:obj,
+            megj:obj2,
+            koltseg:obj3
+          });
+          console.log("Hozzáadva");
+        }
+      }
+    }
+  }
 }

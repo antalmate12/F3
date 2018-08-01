@@ -1,25 +1,29 @@
   <h1 >
     Költéseim
   </h1>
-<div>
-  <table *ngIf="data">
-		<tr>
-			<th>Dátum</th>
-			<th>Megjegyzés</th>
-			<th>Költség</th>
-    </tr>
-    <tr *ngFor="let data of data">
-			<td>{{data.datum}}</td>
-			<td>{{data.megj}}</td>
-			<td>{{data.koltseg}}</td>
-    </tr>
-    
-  </table>
-</div>
-<hr/>
-<div>
-  <ngb-datepicker #d></ngb-datepicker>
-  <input type="text"/>
-  <input type="text"/>
 
+<div>
+    <div style="float:left;">
+        <table *ngIf="data">
+          <tr>
+            <th>Dátum</th>
+            <th>Megjegyzés</th>
+            <th>Költség</th>
+          </tr>
+          <tr *ngFor="let data of data">
+            <td>{{data.datum}}</td>
+            <td>{{data.megj}}</td>
+            <td>{{data.koltseg}}</td>
+          </tr>          
+        </table>
+      </div>
+      
+      
+      <div style="float:right;">
+        <h1>Új költés hozzáadása</h1>
+        <input #d type="date"/>
+        <input #megjegyzes type="text"/>
+        <input #koltseg type="text"/>
+        <button class="" (click)="addData(d.value,megjegyzes.value,koltseg.value)">Rögzítés</button>
+      </div>
 </div>
