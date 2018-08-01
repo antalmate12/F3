@@ -1,6 +1,9 @@
   <h1 >
     Költéseim
   </h1>
+  <h2>Limit beállítása</h2>
+  <input #limit type="number"/>
+  <input (click)="setLimit(limit.value)" type="submit"/>
 <!--
   <select [(ngModel)]="translationService.language">
       <option *ngFor="let language of translationService.languages" [ngValue]="language">{{language}}</option>
@@ -26,6 +29,7 @@
             </td>
           </tr>          
         </table>
+        <p>Maradék a limitből: {{limit-szum}}</p>
       </div>
       
       

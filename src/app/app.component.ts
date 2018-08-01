@@ -18,7 +18,9 @@ export class Koltseg {
 export class AppComponent {
   data:Koltseg[]=[];
   Prices:number[]=[];
-  
+  limit:number=0;
+  szum:number=0;
+
   constructor(private translationService: TranslationService){}
 
   addData(obj,obj2,obj3,obj4) {
@@ -45,9 +47,10 @@ export class AppComponent {
     this.Prices = this.data.map(item => item.koltseg);
   }
 
-
-
-
+  setLimit(obj) {
+    this.limit = obj;
+    console.log(this.limit);
+  }
 
 
   public lineChartLabels: Array<any>;
