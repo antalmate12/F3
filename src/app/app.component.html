@@ -1,7 +1,11 @@
   <h1 >
     Költéseim
   </h1>
-
+<!--
+  <select [(ngModel)]="translationService.language">
+      <option *ngFor="let language of translationService.languages" [ngValue]="language">{{language}}</option>
+  </select>
+-->
 <div>
     <div style="float:left;">
         <table *ngIf="data">
@@ -40,7 +44,7 @@
 </div>
 
 
-<div style="margin-top:20px;width:50%;" class="row">	
+<div style="margin-top:300px;width:50%;" class="row">	
     <div class="col-md-6">
 		<div style="display: block;">
 			<canvas baseChart 

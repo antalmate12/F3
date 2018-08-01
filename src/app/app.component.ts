@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+import {TranslationService} from '../app/service/translation.service';
+
 export class Koltseg {
   datum:string;
   megj:string;
@@ -16,6 +18,8 @@ export class Koltseg {
 export class AppComponent {
   data:Koltseg[]=[];
   Prices:number[]=[];
+  
+  constructor(private translationService: TranslationService){}
 
   addData(obj,obj2,obj3,obj4) {
     if(obj) {
@@ -67,5 +71,5 @@ export class AppComponent {
   public lineChartType: string = 'line';
 
 
-  
+
 }
