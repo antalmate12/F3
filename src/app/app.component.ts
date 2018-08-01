@@ -31,4 +31,11 @@ export class AppComponent {
       }
     }
   }
+  delData(dt,megj,kolt,kat) {
+    var index = this.data.findIndex(
+      x => x.datum === dt, y => y.megj === megj
+    );
+    this.data.splice(index, 1);
+  }
+
 }

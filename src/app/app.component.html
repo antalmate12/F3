@@ -10,12 +10,16 @@
             <th>Megjegyzés</th>
             <th>Költség</th>
             <th>Kategória</th>
+            <th></th>
           </tr>
           <tr *ngFor="let data of data">
             <td>{{data.datum}}</td>
             <td>{{data.megj}}</td>
             <td>{{data.koltseg}}</td>
             <td>{{data.kat}}</td>
+            <td>
+                <button title="Költés törlése" (click)="delData(data.datum, data.megj,data.kotlseg,data.kat)">C</button>
+            </td>
           </tr>          
         </table>
       </div>
