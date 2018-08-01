@@ -9,11 +9,13 @@
             <th>Dátum</th>
             <th>Megjegyzés</th>
             <th>Költség</th>
+            <th>Kategória</th>
           </tr>
           <tr *ngFor="let data of data">
             <td>{{data.datum}}</td>
             <td>{{data.megj}}</td>
             <td>{{data.koltseg}}</td>
+            <td>{{data.kat}}</td>
           </tr>          
         </table>
       </div>
@@ -24,6 +26,11 @@
         <input #d type="date"/>
         <input #megjegyzes type="text"/>
         <input #koltseg type="text"/>
-        <button class="" (click)="addData(d.value,megjegyzes.value,koltseg.value)">Rögzítés</button>
+        <select #kat>
+            <option>Étel</option>
+            <option>Szórakozás</option>
+            <option>Lakhatás</option>
+        </select>
+        <button class="" (click)="addData(d.value,megjegyzes.value,koltseg.value,kat.value)">Rögzítés</button>
       </div>
 </div>
