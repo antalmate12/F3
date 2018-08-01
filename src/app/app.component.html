@@ -27,9 +27,9 @@
       
       <div style="float:right;">
         <h1>Új költés hozzáadása</h1>
-        <input #d type="date"/>
-        <input #megjegyzes type="text"/>
-        <input #koltseg type="text"/>
+        <input placeholder="Dátum" #d type="date"/>
+        <input placeholder="Megjegyzés" #megjegyzes type="text"/>
+        <input placeholder="Költség" #koltseg type="number"/>
         <select #kat>
             <option>Étel</option>
             <option>Szórakozás</option>
@@ -37,4 +37,22 @@
         </select>
         <button class="" (click)="addData(d.value,megjegyzes.value,koltseg.value,kat.value)">Rögzítés</button>
       </div>
+</div>
+
+
+<div style="margin-top:20px;width:50%;" class="row">	
+    <div class="col-md-6">
+		<div style="display: block;">
+			<canvas baseChart 
+        id="myLineChart" width="400" height="400" 
+        [data]=Prices
+        [labels]='lineChartLabels'
+
+        [options]="lineChartOptions" 
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType">
+			</canvas>
+    </div>	
+  </div>
 </div>
